@@ -146,9 +146,11 @@ struct ContentView: View {
                     ForEach(viewModel.laps.enumerated().reversed(), id: \.offset) { lap in
                         HStack {
                             Text("Lap \(lap.offset + 1)")
+                                .font(.body.weight(.semibold))
+
                             Spacer()
                             Text(lap.element.0 .formatter)
-                                .font(.body.weight(.semibold))
+                                .font(.body.weight(.thin))
                                 .monospacedDigit()
                                 .contentTransition(.numericText())
                                 .animation(.easeOut(duration: 0.1), value: viewModel.total)
