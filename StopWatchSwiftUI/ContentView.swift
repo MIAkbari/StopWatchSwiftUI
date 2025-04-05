@@ -44,6 +44,7 @@ struct TimeButtonViewModifier: ViewModifier {
             .equalSize()
         
         forground.background(background)
+            .shadow(color: .indigo.opacity(0.4), radius: 10, x: 0, y: 5)
             .scaleEffect(isPressed ? 0.7 : 1)
             .animation(.smooth, value: isPressed)
             
